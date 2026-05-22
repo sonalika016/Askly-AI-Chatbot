@@ -4,7 +4,7 @@ load_dotenv()
 
 from langchain_google_genai import ChatGoogleGenerativeAI
 import streamlit as st
-os.environ["GOOGLE_API_KEY"] = "AIzaSyCr2_Z5EKZi8j3ifaw0yFu0RsabSi-Y0V4"
+os.environ["GOOGLE_API_KEY"] = os.getenv("GOOGLE_API_KEY")
 
 llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash")
 
